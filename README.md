@@ -20,7 +20,7 @@
 
 <br/>
 
-![Manual](/captura.png)
+![Alt text](./public/captura.png "a title")
 
 ## 🚀 Getting Started
 
