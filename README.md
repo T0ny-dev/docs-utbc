@@ -20,7 +20,7 @@
 
 <br/>
 
-![Manual](assets/thumbnail.png)
+![Manual](/captura.png)
 
 ## 🚀 Getting Started
 

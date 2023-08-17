@@ -40,7 +40,7 @@ const {
               <h2 class="text-lg font-bold mt-8 py-2 px-4 dark:text-zinc-100">{section}</h2>
               {SIDEBAR_ITEMS[section as keyof typeof SIDEBAR_ITEMS].map((path) => (
                 <a href={path} 
-                  class={`relative block py-2 px-4 text-zinc-600 dark:text-zinc-400 hover:text-green-600 dark:hover:text-zinc-300 transition-colors
+                  class={`relative block py-2 px-4 text-blue-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-zinc-300 transition-colors
                     ${(Astro.url.pathname === path) && 'dark:!text-white after:content-[""] after:hidden md:after:block after:w-3 after:h-3 after:bg-zinc-200 dark:after:bg-zinc-700 after:absolute after:top-4 after:rotate-45 after:right-[-5.4rem]'}`}
                 >
                   {docs.find((doc) => path.endsWith(doc.slug))?.data.title}
@@ -75,7 +75,7 @@ const {
 
     <aside class="hidden md:block relative col-span-3 dark:bg-zinc-800" data-pagefind-ignore>
       <div id="_anchor" class="fixed top-0 py-24 px-4">
-        <h1 class="dark:text-white text-xl my-4">On This Page</h1>
+        <h1 class="dark:text-white text-xl my-4">En esta página</h1>
         {headings.map((heading) => {
           let Heading: any = `h${heading.depth}`;
           let className = `peer border-l-2 border-l-zinc-400 dark:border-l-zinc-700 `
@@ -141,3 +141,21 @@ const {
     </aside>
   </main>
 </Base>
+
+<style>
+  #docs_nav > div > div > h2:nth-child(6) {
+    display: none;
+  }
+  #docs_nav > div > div > h2:nth-child(1) {
+    display: none;
+  }
+
+  #docs_nav > div > div > a:nth-child(2) {
+    margin-top: 5vh;
+  }
+
+  #docs_nav > div > div > h2:nth-child(4) {
+    display: none;
+  }
+
+</style>
